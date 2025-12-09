@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="asset/graduation-hat-diploma_42972.png">
+    <title>Marksheet Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>🎓 Marksheet Generator</h1>
+            <p>ICT Project - Automated Result Calculation System</p>
+        </header>
+
+        <!-- Input Form Section -->
+        <div class="form-section">
+            <h2>Student Information</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Student Name:</label>
+                    <input placeholder="Enter the name of the student " type="text" id="name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rollNo">Roll Number:</label>
+                        <input placeholder="Enter the Roll Number of student " type="text" id="rollNo" required>
+                    </div>
+                    <div class="form-group">
+                        <label  for="class" >section and class:</label>
+                        <input placeholder="Enter the section of class " type="text" id="class" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">College Name:</label>
+                    <input placeholder="Enter your University/college Name " type="text" id="school" required>
+                </div>
+
+                <h2>Enter Marks (Out of 100)</h2>
+                
+                <div class="marks-grid">
+                    <div class="form-group">
+                        <label for="maths">Mathematics:</label>
+                        <input type="number" id="maths" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="science">Pakistan Studies/Islamiat:</label>
+                        
+                        <input type="number" id="science" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="english">English:</label>
+                        <input type="number" id="english" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="social">Physics:</label>
+                        <input type="number" id="social" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hindi">Urdu/sindhi:</label>
+                        <input type="number" id="hindi" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="computer">Chemistry:</label>
+                        <input type="number" id="computer" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-generate">Generate Marksheet</button>
+                <button type="button" class="btn-reset" onclick="resetForm()">Reset Form</button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result-section hidden">
+            <div class="marksheet">
+                <!-- Marksheet will be generated here by JavaScript -->
+            </div>
+            <button class="btn-print" onclick="printMarksheet()">🖨 Print Marksheet</button>
+            <button class="btn-back" onclick="goBack()">← Back to Form</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
